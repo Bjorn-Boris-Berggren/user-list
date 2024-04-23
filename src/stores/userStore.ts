@@ -17,12 +17,12 @@ export const useUserStore = defineStore('userStore', {
             }
         },
         generateUsers() {
-            const newUsers = Array.from({ length: 10 }, () => ({
+            const newUsers = Array.from({ length: 5 }, () => ({
                 id: faker.datatype.uuid(),
                 name: faker.name.fullName(),
                 email: faker.internet.email()
             }));
-            this.users.push(...newUsers);  // Use spread operator to add new users to the existing array
+            this.users.push(...newUsers);
         }
     }
 });
